@@ -1,0 +1,33 @@
+Workflow:
+
+- basic setup (html/css/resources/git repo)
+- html: add content and structure semantically (incl: aria)
+- css: layout page
+- test on different browsers
+- css: make page responsive
+- test on tablet & mobile
+- design decisions:
+  - colors
+  - fonts
+  - interactive elements/transitions
+  - icons
+  (git: branch for alternative design decisions?)
+- assets:
+  - optimize images
+  - favicon
+- test on different browsers and devices
+
+In every step:
+- work from top to bottom
+
+After every step:
+- validate html
+- test usability
+- optimize for speed
+- clean up code
+- add comments
+- write summary in README
+
+Parts of the design process that are still missing:
+- layout a page and create a mock
+- plan for multipage experiences
