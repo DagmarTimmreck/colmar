@@ -1,7 +1,9 @@
 Workflow:
 
 - basic setup (html/css/resources/git repo)
-- html: add content and structure semantically (incl: aria)
+- html: add content and structure semantically
+
+- aria
 - css: layout page
 - test on different browsers
 - css: make page responsive
@@ -16,6 +18,7 @@ Workflow:
   - optimize images
   - favicon
 - test on different browsers and devices
+- use keyboard to see focused elements
 
 In every step:
 - work from top to bottom
