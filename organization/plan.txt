@@ -2,11 +2,10 @@ Workflow:
 
 - basic setup (html/css/resources/git repo)
 - html: add content and structure semantically
+- css: layout page for mobile
 
-- aria
-- css: layout page
-- test on different browsers
 - css: make page responsive
+- test on different browsers
 - test on tablet & mobile
 - design decisions:
   - colors
@@ -25,7 +24,7 @@ In every step:
 
 After every step:
 - validate html
-- test usability
+- test usability (aria?)
 - optimize for speed
 - clean up code
 - add comments
