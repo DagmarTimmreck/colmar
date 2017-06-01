@@ -12,6 +12,23 @@ a {
   text-decoration: none;
 }
 
+/* styles for classes used throughout */
+
+.compound,
+.split,
+.txt-box {
+  box-sizing: border-box;
+  padding: 1rem 1rem 0 1rem;
+}
+
+.img-box {
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
 
 /* implement styles for mobile first */
 
@@ -19,128 +36,121 @@ a {
   display: none;
 }
 
+section {
+  padding-bottom: 2rem;
+}
+
+section:last-of-type {
+  padding: 0;
+}
+section:nth-child(2n+1) {
+  background-color: lightgrey;
+}
 
 /* header */
 
 header {
   position: fixed;
   z-index: 1;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   width: 100%;
   height: 4rem;
   background-color: white;
 }
 
-.logo-group {
-  padding-left: 2rem;
-}
-
-nav {
+ul {
   display: flex;
   justify-content: space-around;
-  width: 75%;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  margin: 0;
+  padding: 0;
 }
 
+li {
+  display: block;
+}
 
 /* main */
 
 main {
   position: relative;
-  top: 4rem;
-  /* offset fixed header */
+  top: 4rem;  /* offset fixed header */
 }
 
 
 /* main -- banner */
 
-.banner {
-  padding-bottom: 32px;
-  background-color: lightgrey;
+#banner {
+  padding: 0 0 2rem 0;
 }
-
-.image-box {
-  width: 100%;
+#banner .img-box {
   height: 11.25rem;
-  overflow: hidden;
-}
-
-.banner img {
-  width: 100%;
-  height: auto;
 }
 
 h1 {
-  margin: 2rem 1rem 0 1rem;
+  margin: 2rem 1rem;
 }
 
-.banner p {
-  margin: 2rem 1rem 0 1rem;
+#banner p {
+  margin: 1.5rem 1rem;
 }
 
 .button {
   display: block;
-  margin: 1.5rem 1rem 0 1rem;
   padding: 0.5rem 0;
   text-align: center;
   background-color: grey;
 }
 
+/* main -- information */
 
-/* main information */
-
-.information {
-  padding: 0 1rem 2rem 1rem;
+h4 {
+  margin: 0 0 0 1rem;
+  font-size: 1.5rem;
 }
 
-.information article {
-  margin-top: 1rem;
+p {
+  margin-left: 1rem;
 }
 
-.information img {
-  width: 100%;
-  height: auto;
-}
-
-h3 {
-  margin: 1rem;
-}
-
-.information p {
-  margin: 1rem;
-}
-
-.information a {
-  margin: 1rem 1rem 0 1rem;
+#information a {
+  margin-left: 1rem;
   color: blue;
 }
 
 
 /* main - courses */
 
-.courses {
-  padding: 2rem 1rem;
-  background-color: lightgrey;
-}
-
 h2 {
   margin: 0;
+  padding-top: 2rem;
   padding-bottom: 1rem;
   text-align: center;
 }
 
-.courses h3 {
-  margin: 0.5rem;
+#courses .compound {
+  margin: 0.5rem 1rem;
   padding: 1rem;
   background-color: grey;
 }
 
+#courses .compound:first-child {
+  margin-top: 0;
+}
+
+#courses .compound:last-child {
+  margin-bottom: 0;
+}
 
 /* main - thesis */
 
-.thesis h2 {
-  padding: 2rem 0;
+#thesis h2 {
+  padding-bottom: 2rem;
+}
+
+#thesis .compound {
+  padding: 0;
 }
 
 video {
@@ -159,98 +169,4 @@ footer {
   padding: 1rem;
   font-size: 0.66rem;
   background-color: lightgrey;
-}
-
-
-/* adaptions for larger screens */
-
-@media only screen and (min-width: 960px) {
-  .desktop {
-    display: block;
-  }
-  .mobile {
-    display: none;
-  }
-  section {
-    display: flex;
-  }
-  /* header */
-  header {
-    justify-content: space-between;
-  }
-  .logo-group {
-    display: flex;
-    flex-direction: row;
-    padding-left: 1.5rem;
-  }
-  .name {
-    display: block;
-    align-self: center;
-    text-transform: uppercase;
-  }
-  .name .first-part {
-    color: grey;
-  }
-  .name .second-part {
-    color: lightgrey;
-  }
-  nav {
-    width: auto;
-  }
-  nav li {
-    display: inline-block;
-    padding-left: 1rem;
-  }
-  nav li:last-child {
-    padding-right: 1.5rem;
-  }
-  /* main - banner */
-  .banner {
-    align-items: center;
-    padding: 0;
-  }
-  .image-box {
-    width: 60%;
-    height: auto;
-    margin: 2rem 1.5rem;
-  }
-  .text-group {
-    width: 30%;
-    padding-left: 1rem;
-  }
-  .button {
-    display: inline-block;
-    padding: 0.5rem 5rem;
-  }
-  /* main - information */
-  .information {
-    align-items: flex-start;
-  }
-  .group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 30%;
-  }
-  .long {
-    width: 60%;
-  }
-  .long img {
-     margin: 2rem 1.5rem;
-  }
-  .long span {
-    display: block;
-    padding-left: 1rem;
-  }
-  .short {
-    display: flex;
-  }
-  .short img {
-    width: 35%;
-    height: auto;
-    margin: 1rem;
-  }
-  .short .text-group {
-    width: 65%;
-  }
 }
