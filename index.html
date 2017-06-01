@@ -13,16 +13,16 @@
   <header>
     <div class="logo-group">
       <img src="./resources/images/ic-logo.svg" alt="Colmar Academy" />
-      <div class="name optional" role="presentation">
+      <div class="name desktop" role="presentation">
         <span class="first-part">Colmar</span><span class="second-part">Academy</span>
       </div>
     </div>
-    <nav>
+    <nav class="mobile">
       <a href="#"><img src="./resources/images/ic-on-campus.svg" alt="On campus" /> </a>
       <a href="#"><img src="./resources/images/ic-online.svg" alt="Online" /> </a>
       <a href="#"><img src="./resources/images/ic-login.svg" alt="Sign in" /> </a>
     </nav>
-    <nav class="large">
+    <nav class="desktop">
       <ul>
         <li><a href="#">On campus</a></li>
         <li><a href="#">Online</a></li>
@@ -36,12 +36,14 @@
       <div class="image-box">
         <img src="./resources/images/banner.jpg" alt="" />
       </div>
-      <h1>Learn something new everyday</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <a href="#" class="button">Start here</a>
+      <div class="text-group">
+        <h1>Learn something new everyday</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <a href="#" class="button">Start here</a>
+      </div>
     </section>
     <section class="information">
-      <article class="long optional">
+      <article class="long desktop">
         <img src="./resources/images/information-main.jpg" alt="" />
         <h2>It doesn't hurt to keep practicing</h2>
         <p>
@@ -51,22 +53,31 @@
       </article>
       <div class="group">
         <article class="short">
-          <img src="./resources/images/information-orientation-mobile.jpg" als="" />
-          <h3>Orientation date</h3>
-          <p>Tue 10/11 &amp; Wed 10/12: 8am-3pm</p>
-          <a href="#">Read more</a>
+          <img class="desktop" src="./resources/images/information-orientation.jpg" als="" />
+          <img class="mobile" src="./resources/images/information-orientation-mobile.jpg" als="" />
+          <div class="text-group">
+            <h3>Orientation date</h3>
+            <p>Tue 10/11 &amp; Wed 10/12: 8am-3pm</p>
+            <a href="#">Read more</a>
+          </div>
         </article>
         <article class="short">
-          <img src="./resources/images/information-campus-mobile.jpg" als="" />
-          <h3>Our campus</h3>
-          <p>Find which campus is close to you</p>
-          <a href="#">Read more</a>
+          <img class="desktop" src="./resources/images/information-campus.jpg" als="" />
+          <img class="mobile" src="./resources/images/information-campus-mobile.jpg" als="" />
+          <div class="text-group">
+            <h3>Our campus</h3>
+            <p>Find which campus is close to you</p>
+            <a href="#">Read more</a>
+          </div>
         </article>
         <article class="short">
-          <img src="./resources/images/information-guest-lecture-mobile.jpg" als="" />
-          <h3>Our guest lecture</h3>
-          <p>Join a keynote with Oliver Sack about music in medical treatment</p>
-          <a href="#">Read more</a>
+          <img class="desktop" src="./resources/images/information-guest-lecture.jpg" als="" />
+          <img class="mobile" src="./resources/images/information-guest-lecture-mobile.jpg" als="" />
+          <div class="text-group">
+            <h3>Our guest lecture</h3>
+            <p>Join a keynote with Oliver Sack about music in medical treatment</p>
+            <a href="#">Read more</a>
+          </div>
         </article>
       </div>
     </section>
@@ -74,40 +85,40 @@
       <h2>Start learning</h2>
       <div class="gallery">
         <div class="course">
-          <img class="optional" src="./resources/images/course-software.jpg" alt="" />
+          <img class="desktop" src="./resources/images/course-software.jpg" alt="" />
           <h3>Software engineering</h3>
-          <h4 class="optional">Courses</h4>
-          <p class="optional">Web Development, Mobile Development, iOT, APIs</p>
+          <h4 class="desktop">Courses</h4>
+          <p class="desktop">Web Development, Mobile Development, iOT, APIs</p>
         </div>
         <div class="course">
-          <img class="optional" src="./resources/images/course-computer-art.jpg" alt="" />
+          <img class="desktop" src="./resources/images/course-computer-art.jpg" alt="" />
           <h3>Computer art</h3>
-          <h4 class="optional">Courses</h4>
-          <p class="optional">Imaging &amp; Design, Web Design, Motion Graphics &amp; Visual Effects, Computer Animation</p>
+          <h4 class="desktop">Courses</h4>
+          <p class="desktop">Imaging &amp; Design, Web Design, Motion Graphics &amp; Visual Effects, Computer Animation</p>
         </div>
         <div class="course">
-          <img class="optional" src="./resources/images/course-design.jpg" alt="" />
+          <img class="desktop" src="./resources/images/course-design.jpg" alt="" />
           <h3>Design</h3>
-          <h4 class="optional">Courses</h4>
-          <p class="optional">User Experience Design, User Research, Visual Design</p>
+          <h4 class="desktop">Courses</h4>
+          <p class="desktop">User Experience Design, User Research, Visual Design</p>
         </div>
         <div class="course">
-          <img class="optional" src="./resources/images/course-data.jpg" alt="" />
+          <img class="desktop" src="./resources/images/course-data.jpg" alt="" />
           <h3>Data</h3>
-          <h4 class="optional">Courses</h4>
-          <p class="optional">Data Science, Big Data, SQL, Data Visualization</p>
+          <h4 class="desktop">Courses</h4>
+          <p class="desktop">Data Science, Big Data, SQL, Data Visualization</p>
         </div>
         <div class="course">
-          <img class="optional" src="./resources/images/course-business.jpg" alt="" />
+          <img class="desktop" src="./resources/images/course-business.jpg" alt="" />
           <h3>Business</h3>
-          <h4 class="optional">Courses</h4>
-          <p class="optional">Product Development, Business Development, Startup</p>
+          <h4 class="desktop">Courses</h4>
+          <p class="desktop">Product Development, Business Development, Startup</p>
         </div>
         <div class="course">
-          <img class="optional" src="./resources/images/course-marketing.jpg" alt="" />
+          <img class="desktop" src="./resources/images/course-marketing.jpg" alt="" />
           <h3>Marketing</h3>
-          <h4 class="optional">Courses</h4>
-          <p class="optional">Analytics, Content Marketing, Mobile Marketing</p>
+          <h4 class="desktop">Courses</h4>
+          <p class="desktop">Analytics, Content Marketing, Mobile Marketing</p>
         </div>
       </div>
     </section>
@@ -118,11 +129,11 @@
           Video streaming not supported.
           <a href="./resources/videos/thesis.mp4">Download the video "Reimagine Urban"</a>
         </video>
-        <h3 class="optional">Reimagine urban</h3>
-        <p class="optional">"Curabitur vitae libero in ipsum porttior consequat. Aliqum et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat es. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligule."
+        <h3 class="desktop">Reimagine urban</h3>
+        <p class="desktop">"Curabitur vitae libero in ipsum porttior consequat. Aliqum et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat es. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligule."
         </p>
       </article>
-      <div class="group optional">
+      <div class="group desktop">
         <article class="small">
           <img src="./resources/images/thesis-fisma.jpg" alt="" />
           <h3>Fisma: Design and</h3>
@@ -138,7 +149,7 @@
   </main>
   <footer>
     <span>&copy; 2016 Colmar Academy. All rights reserved</span>
-    <nav class="optional">
+    <nav class="desktop">
       <ul>
         <li><a href="">Terms</a></li>
         <li><a href="">Privacy</a></li>
