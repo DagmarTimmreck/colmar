@@ -117,7 +117,7 @@ header .container {
   padding: 0 1.5rem;
 }
 
-/* header -- logo-group */
+/* header -- logo-group  relevant for desktop only */
 .logo-group {
   height: inherit;
   display: flex;
@@ -178,8 +178,9 @@ footer {
   justify-content: center;
 }
 #courses .compound {
-  width: 30%;
-  padding: 0.5rem 1rem;
+  width: 25%;
+  margin: 0.5rem 1rem;
+  background-color: white;
 }
 #courses .txt-box {
   padding: 1rem 1rem 1.5rem 1rem;
@@ -194,4 +195,105 @@ footer {
 footer .container {
   justify-content: space-between;
   padding: 1rem 1.5rem 2rem 1.5rem;
+}
+
+/* adjustments for smaller screens */
+
+/* narrow column too crowded */
+@media only screen and (max-width: 980px) {
+  .wide,
+  .narrow {
+    width: 100%;
+  }
+}
+
+/* narrow column too crowded *again* larger adjustments towards mobile design */
+@media only screen and (max-width: 870px) {
+  .desktop {
+    display: none;
+  }
+  .split .mobile {
+    display: block;
+  }
+  .split {
+    flex-direction: column;
+  }
+  .split .img-box {
+    width: 100%;
+    max-height: 160px;
+    border: 1rem solid white;
+    padding: 0;
+  }
+  .split .txt-box {
+    width: 100%;
+    padding: 0 2rem;
+  }
+  article.split:nth-of-type(2n+1) {
+    background-color: white;
+  }
+  #banner .container {
+    flex-flow: column;
+    padding: 0;
+  }
+  #banner .img-box {
+    max-height: 180px;
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+  #banner p {
+    margin-bottom: 1.5rem;
+  }
+  #banner {
+    padding-bottom: 2rem;
+  }
+  #information .container {
+    padding-top: 0;
+  }
+  #information .img-box {
+    max-height: none;
+  }
+  #courses .compound {
+    width: 40%;
+  }
+  #courses .txt-box {
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    padding: 1rem;
+  }
+  #courses h4 {
+    padding: 0;
+    margin: 0;
+  }
+  footer .container {
+    padding: 1rem;
+  }
+}
+/* header breaks and adjust 'courses section */
+@media only screen and (max-width: 640px){
+  .desktop,
+  header .desktop {
+    display: none;
+  }
+  header .mobile {
+    display: flex;
+    align-items: center;
+    height: inherit;
+  }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  #courses .compound {
+    width: 100%;
+    padding: 0;
+  }
+  #courses .txt-box {
+    height: auto;
+  }
+  #thesis .container {
+    padding-bottom: 1.5rem;
+  }
+
 }
