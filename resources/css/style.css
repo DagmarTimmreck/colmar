@@ -1,56 +1,107 @@
-/* global settings */
+/* for visualization in the implementing phase */
+section:nth-of-type(2n+1),
+article.split:nth-of-type(2n+1),
+footer {
+  background-color: lightgrey;
+}
+/* div, article {
+  border: 1px solid black;
+} */
 
-html {
+/* short reset */
+
+h1, h2, h3, h4, h5, p, ul {
+  margin: 0;
+  padding: 0;
+}
+a, li {
+  display: inline-block;
+}
+article,
+div {
   box-sizing: border-box;
+}
+
+/* global settings */
+html {
   font-family: sans-serif;
   font-size: 16px;
 }
 
-a {
-  display: block;
-  color: inherit;
-  text-decoration: none;
+/* desktop version first */
+.mobile {
+  display: none;
 }
 
-
-/* styles for classes used throughout */
-
-.compound, .split, .txt-box {
-  box-sizing: border-box;
-  padding: 1rem 1rem 0 1rem;
+/* global layout structure with classes */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+.wide {
+  width: 60%;
+}
+.narrow {
+  width: 40%;
+}
+.split {
+  display: flex;
+  align-items: center;
 }
 
+/* image-handling */
 .img-box {
   overflow: hidden;
 }
-
-img {
+img,
+video {
   width: 100%;
   height: auto;
 }
 
-
-/* implement styles for mobile first */
-
-.desktop {
-  display: none;
+/* padding and margin for components used througout */
+.container > .wide {
+  padding-right: 1.5rem;
+}
+.split > .img-box {
+  padding: 1rem;
+}
+.split p {
+  margin-bottom: 0.5rem;
+}
+.compound .txt-box {
+  padding-top: 2rem;
 }
 
-section {
-  padding-bottom: 2rem;
+/* uniform headings of the same kind */
+h1 {
+  margin-bottom: 2rem;
+}
+h2 {
+  padding-top: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+h5 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
-section:last-of-type {
-  padding: 0;
-}
-
-section:nth-child(2n+1) {
-  background-color: lightgrey;
-}
-
+/* settings for individual parts of the page */
 
 /* header */
-
 header {
   position: fixed;
   z-index: 1;
@@ -58,305 +109,89 @@ header {
   height: 4rem;
   background-color: white;
 }
-
-ul {
+header .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 4rem;
-  margin: 0;
-  padding: 0;
+  height: inherit;
+  padding: 0 1.5rem;
 }
 
-li {
-  display: block;
+/* header -- logo-group */
+.logo-group {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+.logo-group img {
+  height: 80%;
+  width: auto;
+}
+.name {
+  text-transform: uppercase;
+}
+.first-part {
+  color: grey;
+}
+.second-part {
+  color: lightgrey;
 }
 
+/* for header AND footer navigation bar */
+nav li {
+  padding-left: 1rem;
+}
 
 /* main */
-
-main {
-  position: relative;
-  top: 4rem;
-  /* offset fixed header */
-}
-
-
-/* main -- banner */
-
-#banner {
-  padding: 0 0 2rem 0;
-}
-
-#banner .img-box {
-  height: 11.25rem;
-}
-
-h1 {
-  margin: 2rem 1rem;
-}
-
-#banner p {
-  margin: 1.5rem 1rem;
-}
-
-.button {
-  display: block;
-  padding: 0.5rem 0;
-  text-align: center;
-  background-color: grey;
-}
-
-
-/* main -- information */
-
-h4 {
-  margin: 0 0 0 1rem;
-  font-size: 1.5rem;
-}
-
-p {
-  margin-left: 1rem;
-}
-
-#information a {
-  margin-left: 1rem;
-  color: blue;
-}
-
-
-/* main - courses */
-
-h2 {
-  margin: 0;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-  text-align: center;
-}
-
-#courses .compound {
-  margin: 0.5rem 1rem;
-  padding: 1rem;
-  background-color: grey;
-}
-
-#courses .compound:first-child {
-  margin-top: 0;
-}
-
-#courses .compound:last-child {
-  margin-bottom: 0;
-}
-
-
-/* main - thesis */
-
-#thesis h2 {
-  padding-bottom: 2rem;
-}
-
-#thesis .compound {
-  padding: 0;
-}
-
-video {
-  width: 100%;
-  height: auto;
-  padding-bottom: 1.5rem;
-}
-
-
-/* footer */
-
+/* offset fixed header for main AND footer */
+main,
 footer {
   position: relative;
   top: 4rem;
-  /* offset fixed header */
-  padding: 1rem;
-  font-size: 0.66rem;
-  background-color: lightgrey;
 }
 
-
-/* styles for larger screens */
-
-@media only screen and (min-width: 800px) {
-  .desktop {
-    display: block;
-  }
-  .mobile {
-    display: none;
-  }
-  main {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  /* styles for classes used throughout */
-  section, #banner {
-    display: flex;
-    align-items: flex-start;
-    padding: 2rem 1.5rem;
-  }
-  .large-col {
-    width: 60%;
-    padding: 0;
-  }
-  .small-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 40%;
-    padding: 0;
-  }
-  .split {
-    display: flex;
-    align-items: center;
-    padding: 1rem 0 1rem 1rem;
-  }
-  .small-col .split:first-child {
-    padding-top: 0;
-  }
-  .compound .img-box {
-    width: 100%;
-    height: auto;
-  }
-  .split .txt-box {
-    padding: 1rem 0 1rem 1rem;
-  }
-  .txt-box {
-    padding: 0;
-  }
-  p {
-    margin: 0.5rem 0;
-  }
-  /* header */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .logo-group {
-    height: inherit;
-    display: flex;
-    align-items: center;
-    padding-left: 1.5rem;
-  }
-  .logo-group img {
-    height: 80%;
-    width: auto;
-  }
-  .name {
-    text-transform: uppercase;
-  }
-  .first-part {
-    color: grey;
-  }
-  .second-part {
-    color: lightgrey;
-  }
-  li {
-    padding-right: 1rem;
-  }
-  /* main -- banner */
-  #banner .large-col {
-    margin-right: 24px;
-  }
-  #banner .img-box {
-    height: auto;
-  }
-  #banner .txt-box {
-    align-self: center;
-    padding-left: 1rem;
-    padding-right: 4rem;
-  }
-  h1 {
-    margin: 0;
-  }
-  #banner p {
-    margin: 1rem 0;
-  }
-  .button {
+/* main -- indivudual sections */
+/* #banner */
+#banner .txt-box {
+  align-self: center;
+  padding-left: 1rem;
+}
+#banner p {
+  margin-bottom: 2rem;
+}
+#banner .button {
     display: block;
     padding: 0.5rem;
     margin: 0 5%;
-  }
-  /* main -- information */
-  h3 {
-    margin: 0;
-    padding-top: 2rem;
-    padding-bottom: 1.5rem;
-    font-size: 2rem;
-    text-align: left;
-  }
-  .source {
-    padding: 1.5rem 0;
-  }
-  #information a {
-    margin: 0;
-  }
-  h4 {
-    font-size: 1.33rem;
-    margin: 0;
-  }
-  /* main -- courses */
-  #courses,
-  #thesis {
-    flex-flow: column;
-    align-items: center;
-  }
-  .gallery {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 0 3rem;
-  }
-  #courses .compound {
-    width: 30%;
-    padding: 0;
-    margin: 0.5rem 0;
-    background-color: white;
-  }
-  #courses .compound:first-child {
-    margin-top: 0.5rem;
-  }
-  #courses .compound:last-child {
-    margin-bottom: 0.5rem;
-  }
-  #courses .txt-box {
-    padding: 1rem 0 1.5rem 1rem;
-  }
-  h2 {
-    width: 100%;
-    padding-top: 0;
-    padding-bottom: 2rem;
-  }
-  h5 {
-    font-size: 1rem;
-    font-weight: normal;
-    text-transform: uppercase;
-  }
-  /* main -- thesis */
-  #dirty-hack {
-    display: flex;
-  }
-  #thesis {
-    padding: 2rem 1.5rem;
-  }
-  #thesis .large-col {
-    margin-right: 1rem;
-  }
-  #thesis h3 {
-    padding-top: 0;
-  }
+    text-align: center;
+    background-color: grey;
+}
 
-  /* footer */
-  footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 0 2rem 1.5rem;
-  }
-  footer ul {
-    align-items: flex-start;
-  }
+/* #information */
+#information .source {
+  margin-top: 1.5rem;
+}
+
+/* #courses */
+#courses .container {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#courses .compound {
+  width: 30%;
+  padding: 0.5rem 1rem;
+}
+#courses .txt-box {
+  padding: 1rem 1rem 1.5rem 1rem;
+}
+
+/* # thesis */
+#thesis .container > .wide {
+  padding-right: 0;
+}
+
+/* footer */
+footer .container {
+  justify-content: space-between;
+  padding: 1rem 1.5rem 2rem 1.5rem;
 }
