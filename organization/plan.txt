@@ -2,8 +2,7 @@ Workflow:
 
 - basic setup (html/css/resources/git repo)
 - html: add content and structure semantically
-- css: layout page for mobile
-
+- css: layout page for desktop
 - css: make page responsive
 - test on different browsers
 - test on tablet & mobile
@@ -12,7 +11,6 @@ Workflow:
   - fonts
   - interactive elements/transitions
   - icons
-  (git: branch for alternative design decisions?)
 - assets:
   - optimize images
   - favicon
@@ -33,3 +31,8 @@ After every step:
 Parts of the design process that are still missing:
 - layout a page and create a mock
 - plan for multipage experiences
+
+
+TODOS:
+- overall page structure with inline-block instead of flex?
+- where do I need flex?

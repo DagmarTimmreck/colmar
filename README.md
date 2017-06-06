@@ -3,9 +3,9 @@ Colmar Academy - Codecademy Ready Capstone Project (Week 7)
 
 Open:
 - I would ask the designer if she just overlooked the "for companies" entry in the mobile version. (I think it should be accessible on mobile too)
-- Start here is a bad name for a link concerning -> accessibility-workaround? (also Read more)
+- Start here is a bad name for a link concerning accessibility -> workaround? (also Read more)
 - make images responsive with picture tag? or as background images?
-  how to prevent large images from loading?
+  how to prevent images from loading twise on mobile?
 
 
 Layout:
@@ -17,6 +17,20 @@ articles with images associated are of two types .split (using the columns appro
 
 for setting a maximum width on the content and not on the background there is the .container class applied to all main areas.
 
-Starting with implementing the desktop version
+Decisions:
+- most images are decoration so they get alt=""
+- links have clear hover/active/focus settings
 
-selectors for elements that take place only in certain sections are made specific even if it is not necessary to prevent future surprises. 
+
+
+Color & Font choices:
+I want to transport:
+- campus athmosphere (nature and inspiring surroundings) -> green
+- joy of learning and creating -> Playful (but readable) font for the headings
+- respectability/reliability -> not too bright
+
+colors:
+green #5bca00
+light-green #8ce83f
+gold  #ffc10e
+black (for text)
