@@ -1,16 +1,16 @@
 /* links and button */
 a {
   padding: 1px 1rem;
-  background-color: #5bca00;
-  color: #ffc10e;
+  background-color: #398000;
+  color: #ffdf08;
   text-decoration: none;
   transition: all 1s ease-out;
 }
 a:hover {
-  outline: 2px solid #5bca00;
+  outline: 2px solid #398000;
   font-weight: bold;
-  background-color: #ffc10e;
-  color: #5bca00;
+  background-color: #ffdf08;
+  color: #398000;
 }
 a:focus {
   outline-style: none;
@@ -27,15 +27,15 @@ a:visited {
 /* colors */
 header,
 section:nth-of-type(2n) {
-  background-color: #5bca00;
+  background-color: #398000;
 }
 section:nth-of-type(2n+1),
 article.split,
 footer {
-  background-color: #8ce83f;
+  background-color: #abff66;
 }
 article.split:last-child {
-  background-color: #ffc10e;
+  background-color: #ffdf08;
 }
 
 .logo-group span {
@@ -50,7 +50,7 @@ article.split:last-child {
   color: black;
 }
 .button {
-  background-color: #5bca00;
+  background-color:  #398000;
 }
 
 
