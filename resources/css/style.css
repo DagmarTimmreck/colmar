@@ -34,7 +34,7 @@ article.split,
 footer {
   background-color: #abff66;
 }
-article.split:last-child {
+article.split:nth-child(2n+1) {
   background-color: #ffdf08;
 }
 
@@ -44,10 +44,11 @@ article.split:last-child {
 }
 .logo-group span:first-child {
   font-weight: bold;
-  color: black;
+  color: #ffdf08;
 }
 .logo-group span:last-child {
-  color: black;
+  font-weight: lighter;
+  color: #ffdf08;
 }
 .button {
   background-color:  #398000;
