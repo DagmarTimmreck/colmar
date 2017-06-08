@@ -83,8 +83,7 @@ html {
 /* global layout structure with classes */
 .container {
   display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: space-between;
   padding: 2rem 1.5rem;
 }
 .wide {
@@ -92,7 +91,6 @@ html {
 }
 .narrow {
   width: 40%;
-  max-width: 423px;
 }
 .split {
   display: flex;
@@ -121,6 +119,10 @@ video {
 }
 .compound .txt-box {
   padding-top: 2rem;
+}
+
+.split .txt-box {
+  padding-right: 1rem;
 }
 
 /* uniform headings of the same kind */
@@ -159,7 +161,6 @@ header {
 
 }
 header .container {
-  justify-content: space-between;
   align-items: center;
   height: inherit;
   padding: 0 1.5rem;
@@ -214,6 +215,9 @@ cite {
   display: block;
   margin-top: 1.5rem;
 }
+time {
+  display: inline-block;
+}
 
 /* #courses */
 #courses .container {
@@ -240,9 +244,21 @@ footer .container {
   padding: 1rem 1.5rem 2rem 1.5rem;
 }
 
-/* adjustments for smaller screens */
 
-/* narrow column too crowded */
+/* adjustments for other screensizes */
+
+/* for larger screens - larger base font-size */
+@media only screen and (min-width: 1280px) {
+  html {
+    font-size: 20px;
+  }
+  .container {
+    padding: 2rem 5%;
+  }
+}
+
+/* for smaller screens */
+
 @media only screen and (max-width: 980px) {
   .wide,
   .narrow {
@@ -250,36 +266,47 @@ footer .container {
   }
 }
 
-/* narrow column too crowded *again* larger adjustments towards mobile design */
-@media only screen and (max-width: 870px) {
-  .desktop {
-    display: none;
-  }
-  .split .mobile {
-    display: block;
-  }
+@media only screen and (max-width: 800px) {
+ .desktop
+ {
+   display: none;
+ }
+ .split .mobile {
+   display: block;
+ }
+ header .mobile {
+   display: flex;
+   align-items: center;
+   height: inherit;
+ }
+ ul {
+   display: flex;
+   justify-content: space-around;
+   width: 100%;
+ }
+
+}
+
+@media only screen and (max-width: 720px) {
   .split {
     flex-direction: column;
+    border: 1rem solid transparent;
   }
   .split .img-box {
     width: 100%;
-    max-height: 160px;
-    border: 1rem solid white;
+    max-height: 12rem;
     padding: 0;
   }
   .split .txt-box {
     width: 100%;
-    padding: 0 2rem;
-  }
-  article.split:nth-of-type(2n+1) {
-    background-color: white;
+    padding: 1rem 2rem;
   }
   #banner .container {
     flex-flow: column;
     padding: 0;
   }
   #banner .img-box {
-    max-height: 180px;
+    max-height: 15rem;
     padding: 0;
     margin-bottom: 2rem;
   }
@@ -290,7 +317,7 @@ footer .container {
     padding-bottom: 2rem;
   }
   #information .container {
-    padding-top: 0;
+    padding: 0;
   }
   #information .img-box {
     max-height: none;
@@ -312,22 +339,9 @@ footer .container {
     padding: 1rem;
   }
 }
-/* header breaks and adjust 'courses section */
+
+/*  adjust 'courses section */
 @media only screen and (max-width: 640px){
-  .desktop,
-  header .desktop {
-    display: none;
-  }
-  header .mobile {
-    display: flex;
-    align-items: center;
-    height: inherit;
-  }
-  ul {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-  }
   #courses .compound {
     width: 100%;
     padding: 0;
@@ -338,5 +352,4 @@ footer .container {
   #thesis .container {
     padding-bottom: 1.5rem;
   }
-
 }
