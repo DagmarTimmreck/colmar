@@ -87,16 +87,16 @@ article.split:nth-child(2n+1) {
   padding: 1rem;
 }
 
+.split .txt-box {
+  padding-right: 1rem;
+}
+
 .split p {
   margin-bottom: 0.5rem;
 }
 
 .compound .txt-box {
   padding-top: 2rem;
-}
-
-.split .txt-box {
-  padding-right: 1rem;
 }
 
 
@@ -151,16 +151,20 @@ a {
   background-color: #424a25;
   color: #F4F0CB;
   text-decoration: none;
-  transition: all 1s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 a:hover {
+  box-shadow: 0.3rem 0.3rem #DED29E, -0.3rem -0.3rem #DED29E,
+              0.6rem 0.6rem #26210D, -0.6rem -0.6rem #26210D;
   font-weight: bold;
   background-color: #26210D;
 }
 
 a:focus {
-  outline: 2px solid #424a25;
+  outline-style: none;
+  box-shadow: 0.3rem 0.3rem #DED29E, -0.3rem -0.3rem #DED29E,
+              0.6rem 0.6rem #424a25, -0.6rem -0.6rem #424a25;
 }
 
 a:active {
@@ -307,7 +311,9 @@ footer .container {
 
 /* adjustments for other screensizes */
 
+
 /* for larger screens - larger base font-size  and some breathing room */
+
 @media only screen and (min-width: 1280px) {
   html {
     font-size: 20px;
@@ -317,9 +323,12 @@ footer .container {
   }
 }
 
+
 /* for smaller screens */
 
+
 /* guest lecture box gets too crowded */
+
 @media only screen and (max-width: 980px) {
   /* overall layout */
   .wide, .narrow {
@@ -327,7 +336,9 @@ footer .container {
   }
 }
 
+
 /* header breaks */
+
 @media only screen and (max-width: 835px) {
   /* overall layout */
   .desktop {
@@ -336,7 +347,7 @@ footer .container {
   .mobile {
     display: block;
   }
-  a {
+  header a {
     border-radius: 1rem;
   }
   /* header */
@@ -354,7 +365,7 @@ footer .container {
     align-items: center;
     width: 100%;
   }
-  li:first-child img{
+  li:first-child img {
     height: 3rem;
     width: auto;
   }
@@ -370,6 +381,7 @@ footer .container {
 
 
 /* fully implement mobile spec */
+
 @media only screen and (max-width: 720px) {
   /* overall layout */
   .split {
