@@ -24,11 +24,10 @@ html {
 
 
 /* colors --- also used to style links
-dark green #778943
 light green #B7c68B
+dark green #424a25
 light beige #F4F0CB
 dark beige #DED29E
-light brown #B3A580
 dark brown #26210D
 */
 
@@ -45,7 +44,7 @@ section:nth-of-type(2n+1), article.split, footer {
 }
 
 article.split:nth-child(2n+1) {
-  background-color: #B3A580;
+  background-color: #DED29E;
 }
 
 
@@ -148,8 +147,8 @@ h5 {
 
 a {
   padding: 1px 1rem;
-  border-radius: 40% 0.5rem;
-  background-color: #778943;
+  border-radius: 4rem 0.5rem;
+  background-color: #424a25;
   color: #F4F0CB;
   text-decoration: none;
   transition: all 1s ease-out;
@@ -161,7 +160,7 @@ a:hover {
 }
 
 a:focus {
-  outline: 2px solid #778943;
+  outline: 2px solid #424a25;
 }
 
 a:active {
@@ -338,7 +337,7 @@ footer .container {
     display: block;
   }
   a {
-    border-radius: 0.5rem;
+    border-radius: 1rem;
   }
   /* header */
   header .mobile {
@@ -354,6 +353,10 @@ footer .container {
     justify-content: space-around;
     align-items: center;
     width: 100%;
+  }
+  li:first-child img{
+    height: 3rem;
+    width: auto;
   }
   /* courses */
   i {
