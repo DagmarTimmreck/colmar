@@ -1,123 +1,97 @@
-/* links and button */
-a {
-  padding: 1px 1rem;
-  background-color: #398000;
-  color: #ffdf08;
-  text-decoration: none;
-  transition: all 1s ease-out;
-}
-a:hover {
-  outline: 2px solid #398000;
-  font-weight: bold;
-  background-color: #ffdf08;
-  color: #398000;
-}
-a:focus {
-  outline-style: none;
-}
-a:active {
-  position: relative;
-  top: 2px;
-  left: 2px;
-}
-a:visited {
-  color: #000000;
-}
-
-/* colors */
-header,
-section:nth-of-type(2n) {
-  background-color: #398000;
-}
-section:nth-of-type(2n+1),
-article.split,
-footer {
-  background-color: #abff66;
-}
-article.split:nth-child(2n+1) {
-  background-color: #ffdf08;
-}
-
-.logo-group span {
-  font-size: 1.5rem;
-  line-height: 1;
-}
-.logo-group span:first-child {
-  font-weight: bold;
-  color: #ffdf08;
-}
-.logo-group span:last-child {
-  font-weight: lighter;
-  color: #ffdf08;
-}
-.button {
-  background-color:  #398000;
-}
-
-
 /* short reset */
 
 body, h1, h2, h3, h4, h5, p, ul {
   margin: 0;
   padding: 0;
 }
+
 a, li {
   display: inline-block;
 }
-article,
-div {
+
+article, div {
   box-sizing: border-box;
 }
 
+
 /* global settings */
+
 html {
   font-family: 'Convergence', sans-serif;
   font-size: 16px;
   line-height: 1.3;
 }
 
+
+/* colors --- also used to style links
+dark green #778943
+light green #B7c68B
+light beige #F4F0CB
+dark beige #DED29E
+light brown #B3A580
+dark brown #26210D
+*/
+
+body {
+  color: #26210D;
+}
+
+header, section:nth-of-type(2n), .courses .compound {
+  background-color: #B7C68B;
+}
+
+section:nth-of-type(2n+1), article.split, footer {
+  background-color: #F4F0CB;
+}
+
+article.split:nth-child(2n+1) {
+  background-color: #B3A580;
+}
+
+
 /* desktop version first */
+
 .mobile {
   display: none;
 }
 
+
 /* global layout structure with classes */
+
 .container {
   display: flex;
   justify-content: space-between;
   padding: 2rem 1.5rem;
 }
+
 .wide {
   width: 60%;
 }
+
 .narrow {
   width: 40%;
 }
+
 .split {
   display: flex;
   align-items: center;
 }
 
-/* image-handling */
-.img-box {
-  overflow: hidden;
-}
-img,
-video {
-  width: 100%;
-  height: auto;
-}
 
 /* padding and margin for components used througout */
-.container > .wide {
+
+.container>.wide {
   padding-right: 1.5rem;
 }
-.split > .img-box {
+
+.split>.img-box {
   padding: 1rem;
 }
+
 .split p {
   margin-bottom: 0.5rem;
 }
+
 .compound .txt-box {
   padding-top: 2rem;
 }
@@ -126,120 +100,206 @@ video {
   padding-right: 1rem;
 }
 
+
+/* image-handling */
+
+.img-box {
+  overflow: hidden;
+}
+
+img, video {
+  width: 100%;
+  height: auto;
+}
+
+
 /* uniform headings of the same kind */
+
 h1 {
   margin-bottom: 2rem;
   font-size: 2rem;
 }
+
 h2 {
   padding-top: 2rem;
   font-size: 2rem;
   text-align: center;
 }
+
 h3 {
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
   font-weight: bold;
 }
+
 h4 {
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
 }
+
 h5 {
   margin-bottom: 0.5rem;
   font-size: 1rem;
   text-transform: uppercase;
 }
 
+
+/* links behaving like buttons for better UX */
+
+a {
+  padding: 1px 1rem;
+  border-radius: 40% 0.5rem;
+  background-color: #778943;
+  color: #F4F0CB;
+  text-decoration: none;
+  transition: all 1s ease-out;
+}
+
+a:hover {
+  font-weight: bold;
+  background-color: #26210D;
+}
+
+a:focus {
+  outline: 2px solid #778943;
+}
+
+a:active {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+a:visited {
+  color: #DED29E;
+}
+
+
 /* settings for individual parts of the page */
 
+
+/* header AND footer navigation bar */
+
+nav li {
+  padding-left: 1rem;
+}
+
+
 /* header */
+
 header {
   position: fixed;
   z-index: 1;
   width: 100%;
   height: 4rem;
-
 }
+
 header .container {
   align-items: center;
   height: inherit;
   padding: 0 1.5rem;
 }
 
+
 /* header -- logo-group  relevant for desktop only */
+
 .logo-group {
-  height: inherit;
+  height: 4rem;
   display: flex;
   align-items: center;
 }
+
 .logo-group img {
   height: 80%;
   width: auto;
 }
+
 .name {
+  font-size: 1.5rem;
+  line-height: 1;
   text-transform: uppercase;
 }
 
-
-/* for header AND footer navigation bar */
-nav li {
-  padding-left: 1rem;
+.name span:first-child {
+  font-weight: bold;
 }
 
+.name span:last-child {
+  font-weight: lighter;
+}
+
+
 /* main */
+
+
 /* offset fixed header for main AND footer */
-main,
-footer {
+
+main, footer {
   position: relative;
   top: 4rem;
 }
 
+
 /* main -- indivudual sections */
-/* #banner */
-#banner .txt-box {
+
+
+/* .banner */
+
+.banner .txt-box {
   align-self: center;
   padding-left: 1rem;
 }
-#banner p {
+
+.banner p {
   margin-bottom: 2rem;
 }
+
 .button {
-    display: block;
-    padding: 0.5rem;
-    margin: 0 5%;
-    text-align: center;
+  display: block;
+  padding: 0.5rem;
+  margin: 0 5%;
+  text-align: center;
 }
 
-/* #information */
+
+/* .information */
+
 cite {
   display: block;
   margin-top: 1.5rem;
 }
+
 time {
   display: inline-block;
 }
 
-/* #courses */
-#courses .container {
+
+/* .courses */
+
+.courses .container {
   flex-wrap: wrap;
   justify-content: center;
 }
-#courses .compound {
+
+.courses .compound {
   width: 25%;
   margin: 0.5rem 1rem;
-  background-color: #ffc10e;
 }
-#courses .txt-box {
+
+.courses .txt-box {
   padding: 1rem 1rem 1.5rem 1rem;
 }
 
-/* # thesis */
-#thesis .container > .wide {
+
+/* . thesis */
+
+.thesis .container>.wide {
   padding-right: 0;
 }
 
+
 /* footer */
+
 footer .container {
   justify-content: space-between;
   padding: 1rem 1.5rem 2rem 1.5rem;
@@ -248,7 +308,7 @@ footer .container {
 
 /* adjustments for other screensizes */
 
-/* for larger screens - larger base font-size */
+/* for larger screens - larger base font-size  and some breathing room */
 @media only screen and (min-width: 1280px) {
   html {
     font-size: 20px;
@@ -260,35 +320,55 @@ footer .container {
 
 /* for smaller screens */
 
+/* guest lecture box gets too crowded */
 @media only screen and (max-width: 980px) {
-  .wide,
-  .narrow {
+  /* overall layout */
+  .wide, .narrow {
     width: 100%;
   }
 }
 
-@media only screen and (max-width: 800px) {
- .desktop
- {
-   display: none;
- }
- .split .mobile {
-   display: block;
- }
- header .mobile {
-   display: flex;
-   align-items: center;
-   height: inherit;
- }
- ul {
-   display: flex;
-   justify-content: space-around;
-   width: 100%;
- }
-
+/* header breaks */
+@media only screen and (max-width: 835px) {
+  /* overall layout */
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  a {
+    border-radius: 0.5rem;
+  }
+  /* header */
+  header .mobile {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+  }
+  header img {
+    padding-top: 0.5rem;
+  }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  /* courses */
+  i {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .courses h4 {
+    text-align: center;
+  }
 }
 
+
+/* fully implement mobile spec */
 @media only screen and (max-width: 720px) {
+  /* overall layout */
   .split {
     flex-direction: column;
     border: 1rem solid transparent;
@@ -302,55 +382,56 @@ footer .container {
     width: 100%;
     padding: 1rem 2rem;
   }
-  #banner .container {
+  /* individual sections */
+  /* banner */
+  .banner {
+    padding-bottom: 2rem;
+  }
+  .banner .container {
     flex-flow: column;
     padding: 0;
   }
-  #banner .img-box {
+  .banner .img-box {
     max-height: 15rem;
     padding: 0;
     margin-bottom: 2rem;
   }
-  #banner p {
+  .banner p {
     margin-bottom: 1.5rem;
   }
-  #banner {
-    padding-bottom: 2rem;
-  }
-  #information .container {
+  /* information */
+  .information .container {
     padding: 0;
   }
-  #information .img-box {
+  .information .img-box {
     max-height: none;
   }
-  #courses .compound {
-    width: 40%;
-  }
-  #courses .txt-box {
-    display: flex;
-    align-items: center;
-    height: 6rem;
-    padding: 1rem;
-  }
-  #courses h4 {
-    padding: 0;
-    margin: 0;
-  }
-  footer .container {
-    padding: 1rem;
-  }
-}
-
-/*  adjust 'courses section */
-@media only screen and (max-width: 640px){
-  #courses .compound {
+  /* courses */
+  .courses .compound {
     width: 100%;
     padding: 0;
   }
-  #courses .txt-box {
+  .courses .txt-box {
+    display: flex;
+    align-items: center;
     height: auto;
+    padding: 1rem;
   }
-  #thesis .container {
+  i {
+    margin: 0 2rem;
+    text-align: center;
+  }
+  .courses h4 {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+  /* thesis */
+  .thesis .container {
     padding-bottom: 1.5rem;
+  }
+  /* footer */
+  footer .container {
+    padding: 1rem;
   }
 }
