@@ -28,3 +28,5 @@ Left Open:
 - I would ask the designer if she just overlooked the "for companies" entry in the mobile version. (I think it should be accessible on mobile too)
 - 'Start here' is a bad name for a link concerning accessibility (also 'Read more')
 - both versions of the images in the information section load every time
+- compress resources
+- poster image for video
